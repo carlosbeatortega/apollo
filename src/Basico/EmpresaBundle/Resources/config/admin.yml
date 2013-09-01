@@ -1,0 +1,9 @@
+services:
+    sonata.admin.empresa:
+        class: Basico\EmpresaBundle\Admin\EmpresasAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Empresas", label: "Empresa" }
+        arguments:
+            - null
+            - Basico\EmpresaBundle\Entity\Empresas
+            - BasicoEmpresaBundle:Admin
